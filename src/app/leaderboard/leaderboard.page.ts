@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GameApiService } from '../services/game-api.service';
 
 @Component({
   selector: 'app-leaderboard',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeaderboardPage implements OnInit {
   players: leaderboardItem[] = [];
-  constructor() {}
-  ngOnInit() {}
+  
+  constructor(private api: GameApiService) {}
+
+  async ngOnInit() {
+    this.players = await this.api.leaderboard();
+  }
 }
+
 interface leaderboardItem {
   usuario: string;
   puntos: number;

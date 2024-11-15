@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GameApiService } from '../services/game-api.service';
 
 @Component({
   selector: 'app-game',
@@ -6,17 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game.page.scss'],
 })
 export class GamePage implements OnInit {
+  numero: number = 0;
+  mensaje: string = '';
 
-  numero: Number = 0;
- mensaje: string = '';
+  constructor(private api: GameApiService) {}
 
   ngOnInit() {}
 
-  onClickAdivinar() {
+  async onClickAdivinar() {
+    await this.api
+      .guess(this.numero)
+      .then((data) => (this.mensaje = data.message))
+      .catch((data) => (this.mensaje = data.error.message));
   }
 
-  onClickReiniciar() {
- 
+  async onClickReiniciar() {
+    await this.api.restart();
+    this.mensaje = '';
+    this.numero = 0;
   }
-
 }
