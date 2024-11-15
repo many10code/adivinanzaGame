@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,17 +8,21 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
-  username: string= ""; 
-  password: string= "";
-  correo: string= "";
+  usuario: string = '';
+  correo: string = '';
+  password: string = '';
+  constructor(
+  private router: Router
+  ) { }
+  ngOnInit() {}
 
-  constructor( private navCtrl:NavController) { }
-
-  ngOnInit() {
-  }
-
-  login(){
-    this.navCtrl.navigateForward('/login')
-  }
+  onClickRegistrar(form: NgForm){
+    if(form.invalid) {
+    console.log('Debes completar todos los campos');
+    return;
+    }
+    this.router.navigate(['/login']);
+    }
+   
 
 }

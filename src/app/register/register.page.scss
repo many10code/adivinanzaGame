@@ -1,45 +1,11 @@
-
-.login-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   }
-  
-  .card-title {
-    text-align: center;
-    font-size: 1em;
-    color: #036427f3;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .welcome-title {
-    text-align: center;
-    font-size: 2.7em;
-    color: #000000;
-    text-shadow: 2px 2px 4px rgba(57, 209, 211, 0.989), 4px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  
-  .register-link {
-    text-align: center;
-    margin-top: 10px;
-    color: #3880ff; 
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
-  ion-card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-  }
-  
-  ion-button {
-    margin-top: 20px;
-    margin-bottom: 14px;
-    margin-right: 15%;
-    margin-left: 15%;
-    border-radius: 10px;
-    width: 70%;
+ 
+  .login-link {
+  text-align: center;
+  margin-top: 10px;
   }
