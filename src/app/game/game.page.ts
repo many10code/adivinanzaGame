@@ -7,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamePage implements OnInit {
 
+  numero: Number = 0;
+ mensaje: string = '';
+
   ngOnInit() {}
 
   onClickAdivinar() {
   }
-  
+
   onClickReiniciar() {
  
   }

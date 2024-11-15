@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./leaderboard.page.scss'],
 })
 export class LeaderboardPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  players: leaderboardItem[] = [];
+  constructor() {}
+  ngOnInit() {}
+}
+interface leaderboardItem {
+  usuario: string;
+  puntos: number;
+  partidas_jugadas: number;
 }
