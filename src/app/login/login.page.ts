@@ -15,6 +15,11 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  register() { this.navCtrl.navigateForward('/register'); }
+  register() { 
+    this.navCtrl.navigateForward('/register'); 
+  }
 
+  entrar(){
+    this.navCtrl.navigateForward('/menu')
+  }
 }
