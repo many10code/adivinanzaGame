@@ -4,7 +4,7 @@
     <ion-card>
       <ion-card-header>
         <ion-title class="card-title">Adivina el Número</ion-title>
-        <ion-card-title class="welcome-title">Bienvenido</ion-card-title>
+        <ion-card-title class="welcome-title">Registrate  </ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <ion-item>
@@ -12,17 +12,18 @@
           <ion-input [(ngModel)]="username" type="text"></ion-input>
         </ion-item>
         <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input [(ngModel)]="correo" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
           <ion-label position="floating">Contraseña</ion-label>
           <ion-input [(ngModel)]="password" type="password"></ion-input>
         </ion-item>
-        <ion-button>Ingresar</ion-button>
+        <ion-button>Registrarse</ion-button>
         <p>
-          ¿No tienes una cuenta? <a class="register-link" (click)="register()">Regístrate aquí</a>
+          ¿Ya tienes una cuenta? <a class="register-link" (click)="login()">Inicia sesión</a>
         </p>
       </ion-card-content>
     </ion-card>
   </div>
 </ion-content>
-
-
-

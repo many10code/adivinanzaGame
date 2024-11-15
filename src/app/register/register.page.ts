@@ -2,19 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-register',
+  templateUrl: './register.page.html',
+  styleUrls: ['./register.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class RegisterPage implements OnInit {
   username: string= ""; 
   password: string= "";
+  correo: string= "";
 
   constructor( private navCtrl:NavController) { }
 
   ngOnInit() {
   }
 
-  register() { this.navCtrl.navigateForward('/register'); }
+  login(){
+    this.navCtrl.navigateForward('/login')
+  }
 
 }
