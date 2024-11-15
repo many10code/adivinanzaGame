@@ -1,0 +1,7 @@
+{
+  "name": "adivinanzagame",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
