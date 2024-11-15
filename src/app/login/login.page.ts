@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { GameApiService } from '../services/game-api.service';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +11,22 @@ import { Router } from '@angular/router';
 export class LoginPage implements OnInit {
   usuario: string = '';
   password: string = '';
-  constructor(private router: Router) {}
+
+  constructor(
+    private router: Router,
+    private api:GameApiService
+  ) {}
+
   ngOnInit() {}
-  onClickIngresar(form: NgForm) {
+
+  async onClickIngresar(form: NgForm) {
     if (form.invalid) {
       console.log('Debes completar todos los campos');
       return;
     }
-    this.router.navigate(['/menu']);
+    await this.api
+      .login(this.usuario, this.password)
+      .then(() => this.router.navigate(['/menu']))
+      .catch((data) => console.error('LOGIN:', data.error.message));
   }
 }
