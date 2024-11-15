@@ -1,0 +1,45 @@
+/* src/app/login/login.page.scss */
+.login-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .card-title {
+    text-align: center;
+    font-size: 1.5em;
+    color: #036427f3;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .welcome-title {
+    text-align: center;
+    font-size: 3.5em;
+    color: #170021;
+    text-shadow: 2px 2px 4px rgba(97, 98, 91, 0.989);
+  }
+  
+  
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+    color: #3880ff; 
+  }
+  
+  ion-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+    margin-bottom: 14px;
+    margin-right: 15%;
+    margin-left: 15%;
+    border-radius: 10px;
+    width: 70%;
+  }
+  
+  
+  
