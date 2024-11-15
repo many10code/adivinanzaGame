@@ -10,24 +10,26 @@ import { lastValueFrom } from 'rxjs';
 export class GameApiService {
   constructor(private http: HttpClient) {}
 
-  async login(usuario: string, password: string): Promise<any>{
+  async login(usuario: string, password: string): Promise<any> {
     const response = await lastValueFrom(
-    this.http.post<{ message: string, token: string }>
-    (`${_BASE_URL}/login`, {usuario, password})
+      this.http.post<{ message: string; token: string }>(`${_BASE_URL}/login`, {
+        usuario,
+        password,
+      })
     );
     localStorage.setItem('token', response.token);
-   
+
     return response;
-    }
+  }
 
   async register(
     correo: string,
     usuario: string,
     password: string
   ): Promise<any> {
-    return await this.http
-      .post(`${_BASE_URL}/register`, { correo, usuario, password })
-      .toPromise();
+    return await lastValueFrom(
+      this.http.post(`${_BASE_URL}/register`, { correo, usuario, password })
+    );
   }
 
   async start(): Promise<any> {

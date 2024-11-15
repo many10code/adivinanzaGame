@@ -1,3 +1,4 @@
+<!-- src/app/game/game.page.html -->
 <ion-header>
   <ion-toolbar mode="ios">
     <ion-buttons slot="start">
@@ -5,6 +6,7 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 <ion-content class="ion-padding">
   <div class="game-container">
     <ion-card mode="ios">
@@ -22,7 +24,7 @@
 
         <br />
         <!-- Botón para adivinar -->
-        <ion-button (click)="onClickAdivinar()" expand=" block ">Adivinar</ion-button>
+        <ion-button (click)="onClickAdivinar()" expand="block">Adivinar</ion-button>
         <!-- Reiniciar juego si ha terminado -->
         <ion-button (click)="onClickReiniciar()" color="medium" expand="block">Reiniciar Juego</ion-button>
       </ion-card-content>
@@ -32,6 +34,9 @@
       <ion-card-header class="ion-text-center">
         <ion-card-subtitle>Mensaje</ion-card-subtitle>
       </ion-card-header>
+      <ion-card-content class="ion-text-center">
+        <p>{{ mensaje }}</p>
+      </ion-card-content>
     </ion-card>
   </div>
 </ion-content>
