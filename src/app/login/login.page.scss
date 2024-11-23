@@ -3,13 +3,61 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  }
- 
-  .register-link {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+ion-card {
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+ion-card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  border-radius: 10px 10px 0 0;
+}
+
+ion-card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #343a40;
+}
+
+ion-card-subtitle {
+  font-size: 1em;
+  color: #6c757d;
+}
+
+ion-item {
+  --background: #ffffff;
+  --border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+ion-button {
+  --border-radius: 5px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-link {
   text-align: center;
   margin-top: 10px;
-  }
- 
-  
-  
-  
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}

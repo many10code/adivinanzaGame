@@ -4,10 +4,22 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-   }
-   .menu-option {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+  }
+  
+  .menu-option {
     width: 200px;
     height: 125px;
     text-align: center;
     align-content: center;
-   }
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  ion-card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  

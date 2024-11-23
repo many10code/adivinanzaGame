@@ -55,4 +55,8 @@ export class GameApiService {
   async statistics(): Promise<any> {
     return await this.http.get(`${_BASE_URL}/statistics`, {}).toPromise();
   }
+
+  logout() {
+    localStorage.removeItem('token');
+  }
 }

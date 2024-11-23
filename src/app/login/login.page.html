@@ -3,23 +3,29 @@
     <ion-card mode="ios">
       <ion-card-header class="ion-text-center">
         <ion-card-title>Bienvenido</ion-card-title>
-        <ion-card-subtitle>Adivina el numero</ion-card-subtitle>
+        <ion-card-subtitle>Adivina el número</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <form #frmLogin="ngForm">
+        <form #frmLogin="ngForm" (ngSubmit)="onClickIngresar(frmLogin)">
           <!-- Campo de Usuario -->
           <ion-item>
             <ion-label position="floating">Usuario</ion-label>
             <ion-input [(ngModel)]="usuario" type="text" name="username" required></ion-input>
           </ion-item>
+          <div *ngIf="frmLogin.submitted && !usuario" class="error-message">
+            El campo usuario es obligatorio.
+          </div>
           <!-- Campo de Contraseña -->
           <ion-item>
             <ion-label position="floating">Contraseña</ion-label>
             <ion-input [(ngModel)]="password" type="password" name="password" required></ion-input>
           </ion-item>
+          <div *ngIf="frmLogin.submitted && !password" class="error-message">
+            El campo contraseña es obligatorio.
+          </div>
           <br />
           <!-- Botón de Ingresar -->
-          <ion-button (click)="onClickIngresar(frmLogin)" expand="block" color="primary"> Ingresar </ion-button>
+          <ion-button type="submit" expand="block" color="primary">Ingresar</ion-button>
         </form>
         <!-- Enlace para registrarse -->
         <div class="register-link">
