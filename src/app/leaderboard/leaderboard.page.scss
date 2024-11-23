@@ -1,0 +1,45 @@
+.leaderboard-container {
+  padding: 20px;
+  background: linear-gradient(to right, #dae59b, #b2e89c);
+ 
+  
+}
+.lista-container{
+  padding: 20px;
+  background: linear-gradient(to right, #9be5ce, #e8cdef);
+  border-radius: 10px;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(169, 245, 169, 0.845);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.leaderboard-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.3);
+}
+
+.position {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+.player-info {
+  flex-grow: 1;
+  margin-left: 10px;
+  color: #333;
+}
+
+.points {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #007bff;
+}

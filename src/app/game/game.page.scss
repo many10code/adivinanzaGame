@@ -1,0 +1,82 @@
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(to bottom right, #f7f7f7, #e2e2e2);
+    padding: 20px;
+  }
+  
+  ion-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+  }
+  
+  ion-card-header {
+    background-color: #4caf50;
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  ion-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  ion-card-subtitle {
+    font-size: 1rem;
+    color: #2f855a;
+  }
+  
+  ion-card-content {
+    padding: 20px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  ion-item {
+    margin-top: 15px;
+    --highlight-color-focused: #4caf50;
+    --highlight-color-invalid: #f44336;
+  }
+  
+  ion-label {
+    font-size: 1rem;
+  }
+  
+  ion-input {
+    font-size: 1.1rem;
+  }
+  
+  ion-button {
+    margin-top: 15px;
+    --border-radius: 20px;
+    --background: #4caf50;
+    --background-activated: #388e3c;
+    --background-focused: #66bb6a;
+    --color: white;
+  }
+  
+  ion-button[color="medium"] {
+    --background: #9e9e9e;
+    --background-activated: #616161;
+  }
+  
+  @media (min-width: 768px) {
+    .game-container {
+      padding: 40px;
+    }
+  
+    ion-card {
+      max-width: 500px;
+    }
+  }
+  
